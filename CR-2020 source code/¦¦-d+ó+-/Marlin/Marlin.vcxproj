@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6ED00740-FA3A-429E-9F12-AD491D9A1ABD}</ProjectGuid>
+    <RootNamespace>Marlin</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>D:\arduino-1.5.6-r2\hardware\arduino\avr\cores\arduino;D:\arduino-1.5.6-r2\hardware\arduino\avr\variants\mega;E:\marlin-meizi\Marlin-RC\Marlin;D:\arduino-1.5.6-r2\hardware\arduino\avr\libraries\Wire;D:\arduino-1.5.6-r2\hardware\arduino\avr\libraries\Wire\utility;D:\arduino-1.5.6-r2\libraries\U8glib;D:\arduino-1.5.6-r2\libraries\U8glib\utility;D:\arduino-1.5.6-r2\libraries\LiquidCrystal\src;D:\arduino-1.5.6-r2\libraries\LiquidCrystal\src\utility;D:\arduino-1.5.6-r2\hardware\arduino\avr\libraries\SPI;D:\arduino-1.5.6-r2\hardware\arduino\avr\libraries\SPI\utility;D:\arduino-1.5.6-r2\libraries;D:\arduino-1.5.6-r2\hardware\arduino\avr\libraries;C:\Program Files\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers;D:\libraries;d:\arduino-1.5.6-r2\hardware\tools\avr\avr\include\;d:\arduino-1.5.6-r2\hardware\tools\avr\avr\include\avr\;d:\arduino-1.5.6-r2\hardware\tools\avr\avr\;d:\arduino-1.5.6-r2\hardware\tools\avr\lib\gcc\avr\4.3.2\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>E:\marlin-meizi\Marlin-RC\Marlin\Visual Micro\.Marlin.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
+      <PreprocessorDefinitions>__AVR_ATmega2560__;ARDUINO=156;ARDUINO_MAIN;__AVR__;__avr__;F_CPU=16000000L;__cplusplus;GCC_VERSION=40301;ARDUINO_ARCH_AVR;ARDUINO_AVR_MEGA2560;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>D:\arduino-1.5.6-r2\hardware\arduino\avr\cores\arduino;D:\arduino-1.5.6-r2\hardware\arduino\avr\variants\mega;E:\marlin-meizi\修改说明\修改说明\Marlin2\Marlin;D:\arduino-1.5.6-r2\libraries\LiquidCrystal;D:\arduino-1.5.6-r2\libraries\LiquidCrystal\utility;D:\arduino-1.5.6-r2\hardware\arduino\avr\libraries\SPI;D:\arduino-1.5.6-r2\hardware\arduino\avr\libraries\SPI\utility;D:\arduino-1.5.6-r2\libraries\U8glib;D:\arduino-1.5.6-r2\libraries\U8glib\utility;D:\arduino-1.5.6-r2\hardware\arduino\avr\libraries\Wire;D:\arduino-1.5.6-r2\hardware\arduino\avr\libraries\Wire\utility;D:\arduino-1.5.6-r2\libraries;D:\arduino-1.5.6-r2\hardware\arduino\avr\libraries;C:\Program Files\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers;D:\libraries;d:\arduino-1.5.6-r2\hardware\tools\avr\avr\include\;d:\arduino-1.5.6-r2\hardware\tools\avr\avr\include\avr\;d:\arduino-1.5.6-r2\hardware\tools\avr\avr\;d:\arduino-1.5.6-r2\hardware\tools\avr\lib\gcc\avr\4.3.2\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>E:\marlin-meizi\修改说明\修改说明\Marlin2\Marlin\Visual Micro\.Marlin.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <PreprocessorDefinitions>__AVR_ATmega2560__;F_CPU=16000000L;ARDUINO=156;ARDUINO_AVR_MEGA2560;ARDUINO_ARCH_AVR;__cplusplus;GCC_VERSION=40302;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="Marlin.ino">
+      <FileType>CppCode</FileType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="blinkm.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="boards.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="buzzer.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="cardreader.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="Conditionals.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="Configuration.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="Configuration_adv.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="configuration_store.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="Default_Version.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="dogm_bitmaps.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="dogm_font_data_6x9_marlin.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="dogm_font_data_HD44780_C.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="dogm_font_data_HD44780_J.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="dogm_font_data_HD44780_W.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="dogm_font_data_ISO10646_1.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="dogm_font_data_ISO10646_5_Cyrillic.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="dogm_font_data_ISO10646_CN.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="dogm_font_data_ISO10646_Kana.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="dogm_font_data_Marlin_symbols.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="dogm_lcd_implementation.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="fastio.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="language.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="language_an.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="language_bg.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="language_ca.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="language_cn.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="language_cz.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="language_da.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="language_de.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="language_en.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="language_es.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="language_eu.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="language_fi.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="language_fr.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="language_gl.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="language_it.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="language_kana.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="language_kana_utf8.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="language_nl.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="language_pl.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="language_pt-br.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="language_pt.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="language_ru.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="language_test.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="macros.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="Marlin.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="MarlinSerial.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="mesh_bed_leveling.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_3DRAG.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_5DPRINT.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_99.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_AZTEEG_X1.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_AZTEEG_X3.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_AZTEEG_X3_PRO.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_BAM_DICE_DUE.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_BRAINWAVE.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_BRAINWAVE_PRO.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_CHEAPTRONIC.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_ELEFU_3.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_FELIX2.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_GEN3_MONOLITHIC.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_GEN3_PLUS.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_GEN6.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_GEN6_DELUXE.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_GEN7_12.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_GEN7_13.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_GEN7_14.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_GEN7_CUSTOM.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_K8200.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_LEAPFROG.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_MEGACONTROLLER.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_MEGATRONICS.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_MEGATRONICS_2.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_MEGATRONICS_3.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_MELZI.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_MELZI_MAKR3D.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_MINIRAMBO.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_MINITRONICS.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_MKS_BASE.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_OMCA.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_OMCA_A.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_PRINTRBOARD.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_RAMBO.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_RAMPS_13.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_RAMPS_13_EFB.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_RAMPS_OLD.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_RIGIDBOARD.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_RUMBA.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_SANGUINOLOLU_11.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_SANGUINOLOLU_12.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_SAV_MKI.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_SETHI.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_STB_11.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_TEENSY2.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_TEENSYLU.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_ULTIMAIN_2.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_ULTIMAKER.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="pins_ULTIMAKER_OLD.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="planner.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="qr_solve.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="SanityCheck.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="Sd2Card.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="Sd2PinMap.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="SdBaseFile.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="SdFatConfig.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="SdFatStructs.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="SdFatUtil.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="SdFile.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="SdInfo.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="SdVolume.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="servo.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="speed_lookuptable.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="stepper.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="stepper_indirection.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="temperature.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="thermistortables.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="ultralcd.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="ultralcd_implementation_hitachi_HD44780.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="ultralcd_st7920_u8glib_rrd.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="utf_mapper.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="vector_3.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+    <ClInclude Include="Visual Micro\.Marlin.vsarduino.h" />
+    <ClInclude Include="watchdog.h">
+      <FileType>CppCode</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="blinkm.cpp" />
+    <ClCompile Include="buzzer.cpp" />
+    <ClCompile Include="cardreader.cpp" />
+    <ClCompile Include="configuration_store.cpp" />
+    <ClCompile Include="digipot_mcp4451.cpp" />
+    <ClCompile Include="M100_Free_Mem_Chk.cpp" />
+    <ClCompile Include="MarlinSerial.cpp" />
+    <ClCompile Include="Marlin_main.cpp" />
+    <ClCompile Include="mesh_bed_leveling.cpp" />
+    <ClCompile Include="planner.cpp" />
+    <ClCompile Include="qr_solve.cpp" />
+    <ClCompile Include="Sd2Card.cpp" />
+    <ClCompile Include="SdBaseFile.cpp" />
+    <ClCompile Include="SdFatUtil.cpp" />
+    <ClCompile Include="SdFile.cpp" />
+    <ClCompile Include="SdVolume.cpp" />
+    <ClCompile Include="servo.cpp" />
+    <ClCompile Include="stepper.cpp" />
+    <ClCompile Include="stepper_indirection.cpp" />
+    <ClCompile Include="temperature.cpp" />
+    <ClCompile Include="ultralcd.cpp" />
+    <ClCompile Include="vector_3.cpp" />
+    <ClCompile Include="watchdog.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties arduino.board.name="mega_atmega2560" arduino.board.desc="Arduino Mega w/ ATmega2560 (Mega 2560)" arduino.board.property_bag="name=Arduino Mega w/ ATmega2560 (Mega 2560)&#xD;&#xA;vid.0=0x2341&#xD;&#xA;pid.0=0x0010&#xD;&#xA;vid.1=0x2341&#xD;&#xA;pid.1=0x0042&#xD;&#xA;upload.tool=avrdude&#xD;&#xA;upload.maximum_data_size=8192&#xD;&#xA;bootloader.tool=avrdude&#xD;&#xA;bootloader.low_fuses=0xFF&#xD;&#xA;bootloader.unlock_bits=0x3F&#xD;&#xA;bootloader.lock_bits=0x0F&#xD;&#xA;build.f_cpu=16000000L&#xD;&#xA;build.core=arduino&#xD;&#xA;build.variant=mega&#xD;&#xA;build.board=AVR_MEGA2560&#xD;&#xA;menu.cpu.atmega2560=ATmega2560 (Mega 2560)&#xD;&#xA;menu.cpu.atmega2560.upload.protocol=wiring&#xD;&#xA;menu.cpu.atmega2560.upload.maximum_size=258048&#xD;&#xA;menu.cpu.atmega2560.upload.speed=115200&#xD;&#xA;menu.cpu.atmega2560.bootloader.high_fuses=0xD8&#xD;&#xA;menu.cpu.atmega2560.bootloader.extended_fuses=0xFD&#xD;&#xA;menu.cpu.atmega2560.bootloader.file=stk500v2/stk500boot_v2_mega2560.hex&#xD;&#xA;menu.cpu.atmega2560.build.mcu=atmega2560&#xD;&#xA;menu.cpu.atmega2560.build.board=AVR_MEGA2560&#xD;&#xA;menu.cpu.atmega1280=ATmega1280&#xD;&#xA;menu.cpu.atmega1280.upload.protocol=arduino&#xD;&#xA;menu.cpu.atmega1280.upload.maximum_size=126976&#xD;&#xA;menu.cpu.atmega1280.upload.speed=57600&#xD;&#xA;menu.cpu.atmega1280.bootloader.high_fuses=0xDA&#xD;&#xA;menu.cpu.atmega1280.bootloader.extended_fuses=0xF5&#xD;&#xA;menu.cpu.atmega1280.bootloader.file=atmega/ATmegaBOOT_168_atmega1280.hex&#xD;&#xA;menu.cpu.atmega1280.build.mcu=atmega1280&#xD;&#xA;menu.cpu.atmega1280.build.board=AVR_MEGA&#xD;&#xA;runtime.ide.path=D:\arduino-1.5.6-r2&#xD;&#xA;build.system.path=D:\arduino-1.5.6-r2\hardware\arduino\avr\system&#xD;&#xA;runtime.ide.version=156&#xD;&#xA;originalid=mega&#xD;&#xA;tools.atprogram.cmd.path=%AVRSTUDIO_EXE_PATH%\atbackend\atprogram&#xD;&#xA;tools.atprogram.cmd.setwinpath=true&#xD;&#xA;tools.atprogram.program.params.verbose=-v&#xD;&#xA;tools.atprogram.program.params.quiet=-q&#xD;&#xA;tools.atprogram.program.pattern=&quot;{cmd.path}&quot; -d {build.mcu} {program.verbose} {program.extra_params} program -c -f &quot;{build.path}\{build.project_name}.hex&quot;&#xD;&#xA;tools.atprogram.program.xpattern=&quot;{cmd.path}&quot; {AVRSTUDIO_BACKEND_CONNECTION} -d {build.mcu} {program.verbose} {program.extra_params} program -c -f &quot;{build.path}\{build.project_name}.hex&quot;&#xD;&#xA;version=1.5.6&#xD;&#xA;compiler.c.cmd=avr-gcc&#xD;&#xA;compiler.c.flags=-c -g -Os -w -ffunction-sections -fdata-sections -MMD&#xD;&#xA;compiler.c.elf.flags=-Os -Wl,--gc-sections&#xD;&#xA;compiler.c.elf.cmd=avr-gcc&#xD;&#xA;compiler.S.flags=-c -g -x assembler-with-cpp&#xD;&#xA;compiler.cpp.cmd=avr-g++&#xD;&#xA;compiler.cpp.flags=-c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -MMD&#xD;&#xA;compiler.ar.cmd=avr-ar&#xD;&#xA;compiler.ar.flags=rcs&#xD;&#xA;compiler.objcopy.cmd=avr-objcopy&#xD;&#xA;compiler.objcopy.eep.flags=-O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0&#xD;&#xA;compiler.elf2hex.flags=-O ihex -R .eeprom&#xD;&#xA;compiler.elf2hex.cmd=avr-objcopy&#xD;&#xA;compiler.ldflags=&#xD;&#xA;compiler.size.cmd=avr-size&#xD;&#xA;build.extra_flags=&#xD;&#xA;recipe.c.o.pattern=&quot;{compiler.path}{compiler.c.cmd}&quot; {compiler.c.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {build.extra_flags} {includes} &quot;{source_file}&quot; -o &quot;{object_file}&quot;&#xD;&#xA;recipe.cpp.o.pattern=&quot;{compiler.path}{compiler.cpp.cmd}&quot; {compiler.cpp.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {build.extra_flags} {includes} &quot;{source_file}&quot; -o &quot;{object_file}&quot;&#xD;&#xA;recipe.S.o.pattern=&quot;{compiler.path}{compiler.c.cmd}&quot; {compiler.S.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {build.extra_flags} {includes} &quot;{source_file}&quot; -o &quot;{object_file}&quot;&#xD;&#xA;recipe.ar.pattern=&quot;{compiler.path}{compiler.ar.cmd}&quot; {compiler.ar.flags} &quot;{build.path}/{archive_file}&quot; &quot;{object_file}&quot;&#xD;&#xA;recipe.c.combine.pattern=&quot;{compiler.path}{compiler.c.elf.cmd}&quot; {compiler.c.elf.flags} -mmcu={build.mcu} -o &quot;{build.path}/{build.project_name}.elf&quot; {object_files} &quot;{build.path}/{archive_file}&quot; &quot;-L{build.path}&quot; -lm&#xD;&#xA;recipe.objcopy.eep.pattern=&quot;{compiler.path}{compiler.objcopy.cmd}&quot; {compiler.objcopy.eep.flags} &quot;{build.path}/{build.project_name}.elf&quot; &quot;{build.path}/{build.project_name}.eep&quot;&#xD;&#xA;recipe.objcopy.hex.pattern=&quot;{compiler.path}{compiler.elf2hex.cmd}&quot; {compiler.elf2hex.flags} &quot;{build.path}/{build.project_name}.elf&quot; &quot;{build.path}/{build.project_name}.hex&quot;&#xD;&#xA;recipe.size.pattern=&quot;{compiler.path}{compiler.size.cmd}&quot; -A &quot;{build.path}/{build.project_name}.elf&quot;&#xD;&#xA;recipe.size.regex=^(?:\.text|\.data|\.bootloader)\s+([0-9]+).*&#xD;&#xA;recipe.size.regex.data=^(?:\.data|\.bss|\.noinit)\s+([0-9]+).*&#xD;&#xA;recipe.size.regex.eeprom=^(?:\.eeprom)\s+([0-9]+).*&#xD;&#xA;tools.avrdude.cmd.path={runtime.ide.path}/hardware/tools/avr/bin/avrdude&#xD;&#xA;tools.avrdude.config.path={runtime.ide.path}/hardware/tools/avr/etc/avrdude.conf&#xD;&#xA;tools.avrdude.cmd.path.linux={runtime.ide.path}/hardware/tools/avrdude&#xD;&#xA;tools.avrdude.config.path.linux={runtime.ide.path}/hardware/tools/avrdude.conf&#xD;&#xA;tools.avrdude.upload.params.verbose=-v -v -v -v&#xD;&#xA;tools.avrdude.upload.params.quiet=-q -q&#xD;&#xA;tools.avrdude.upload.pattern=&quot;{cmd.path}&quot; &quot;-C{config.path}&quot; {upload.verbose} -p{build.mcu} -c{upload.protocol} -P{serial.port} -b{upload.speed} -D &quot;-Uflash:w:{build.path}/{build.project_name}.hex:i&quot;&#xD;&#xA;tools.avrdude.program.params.verbose=-v -v -v -v&#xD;&#xA;tools.avrdude.program.params.quiet=-q -q&#xD;&#xA;tools.avrdude.program.pattern=&quot;{cmd.path}&quot; &quot;-C{config.path}&quot; {program.verbose} -p{build.mcu} -c{protocol} {program.extra_params} &quot;-Uflash:w:{build.path}/{build.project_name}.hex:i&quot;&#xD;&#xA;tools.avrdude.erase.params.verbose=-v -v -v -v&#xD;&#xA;tools.avrdude.erase.params.quiet=-q -q&#xD;&#xA;tools.avrdude.erase.pattern=&quot;{cmd.path}&quot; &quot;-C{config.path}&quot; {erase.verbose} -p{build.mcu} -c{protocol} {program.extra_params} -e -Ulock:w:{bootloader.unlock_bits}:m -Uefuse:w:{bootloader.extended_fuses}:m -Uhfuse:w:{bootloader.high_fuses}:m -Ulfuse:w:{bootloader.low_fuses}:m&#xD;&#xA;tools.avrdude.bootloader.params.verbose=-v -v -v -v&#xD;&#xA;tools.avrdude.bootloader.params.quiet=-q -q&#xD;&#xA;tools.avrdude.bootloader.pattern=&quot;{cmd.path}&quot; &quot;-C{config.path}&quot; {bootloader.verbose} -p{build.mcu} -c{protocol} {program.extra_params} &quot;-Uflash:w:{runtime.platform.path}/bootloaders/{bootloader.file}:i&quot; -Ulock:w:{bootloader.lock_bits}:m&#xD;&#xA;build.usb_manufacturer=&#xD;&#xA;build.usb_flags=-DUSB_VID={build.vid} -DUSB_PID={build.pid} '-DUSB_MANUFACTURER={build.usb_manufacturer}' '-DUSB_PRODUCT={build.usb_product}'&#xD;&#xA;vm.platform.root.path=C:\Program Files\Visual Micro\Visual Micro for Arduino\Micro Platforms\arduino15x&#xD;&#xA;upload.protocol=wiring&#xD;&#xA;upload.maximum_size=258048&#xD;&#xA;upload.speed=115200&#xD;&#xA;bootloader.high_fuses=0xD8&#xD;&#xA;bootloader.extended_fuses=0xFD&#xD;&#xA;bootloader.file=stk500v2/stk500boot_v2_mega2560.hex&#xD;&#xA;build.mcu=atmega2560&#xD;&#xA;ide.hint=Arduino 1.5 Ide&#xD;&#xA;ide.location.key=Arduino15x&#xD;&#xA;ide.location.ide.winreg=Arduino 1.5.x Application&#xD;&#xA;ide.location.sketchbook.winreg=Arduino 1.5.x Sketchbook&#xD;&#xA;ide.location.sketchbook.preferences=sketchbook.path&#xD;&#xA;ide.location.preferences=%VM_APPDATA_ROAMING%\arduino15\preferences.txt&#xD;&#xA;ide.location.preferences_fallback=%VM_APPDATA_ROAMING%\arduino\preferences.txt&#xD;&#xA;ide.default.version=150&#xD;&#xA;ide.default.package=arduino&#xD;&#xA;ide.default.platform=avr&#xD;&#xA;ide.multiplatform=true&#xD;&#xA;ide.includes=arduino.h&#xD;&#xA;ide.platformswithoutpackage=false&#xD;&#xA;ide.includes.fallback=wprogram.h&#xD;&#xA;ide.extension=ino&#xD;&#xA;ide.extension.fallback=pde&#xD;&#xA;ide.versionGTEQ=150&#xD;&#xA;ide.exe=arduino.exe&#xD;&#xA;ide.hosts=atmel&#xD;&#xA;ide.url=http://arduino.cc/en/Main/Software&#xD;&#xA;vm.debug=true&#xD;&#xA;software=ARDUINO&#xD;&#xA;ssh.user.name=root&#xD;&#xA;ssh.user.default.password=arduino&#xD;&#xA;ssh.host.wwwfiles.path=/www/sd&#xD;&#xA;build.working_directory={runtime.ide.path}&#xD;&#xA;ide.appid=arduino15x&#xD;&#xA;location.sketchbook=D:\&#xD;&#xA;vm.core.include=arduino.h&#xD;&#xA;vm.boardsource.path=D:\arduino-1.5.6-r2\hardware\arduino\avr&#xD;&#xA;runtime.platform.path=D:\arduino-1.5.6-r2\hardware\arduino\avr&#xD;&#xA;vm.platformname.name=avr&#xD;&#xA;build.arch=AVR&#xD;&#xA;vm.runtime.compiler.showwarnings=false&#xD;&#xA;serial.port.file=COM6&#xD;&#xA;serial.port=COM6&#xD;&#xA;compiler.path=D:\arduino-1.5.6-r2\hardware\tools\avr\bin\&#xD;&#xA;includes= -I&quot;D:\arduino-1.5.6-r2\hardware\arduino\avr\cores\arduino&quot;  -I&quot;D:\arduino-1.5.6-r2\hardware\arduino\avr\variants\mega&quot;  -I&quot;D:\arduino-1.5.6-r2\hardware\arduino\avr\libraries\Wire&quot;  -I&quot;D:\arduino-1.5.6-r2\libraries\U8glib&quot;  -I&quot;D:\arduino-1.5.6-r2\libraries\LiquidCrystal\src&quot;  -I&quot;D:\arduino-1.5.6-r2\hardware\arduino\avr\libraries\SPI&quot;  -I&quot;D:\arduino-1.5.6-r2\libraries&quot;  -I&quot;D:\arduino-1.5.6-r2\hardware\arduino\avr\libraries&quot;  -I&quot;C:\Program Files\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers&quot;  -I&quot;D:\libraries&quot; &#xD;&#xA;build.path=C:\Documents and Settings\mywool\Local Settings\Application Data\VMicro\Arduino\Builds\Marlin\mega_atmega2560&#xD;&#xA;build.project_name=Marlin&#xD;&#xA;build.variant.path=D:\arduino-1.5.6-r2\hardware\arduino\avr\variants\mega&#xD;&#xA;archive_file=core.a&#xD;&#xA;object_file=C:\Documents and Settings\mywool\Local Settings\Application Data\VMicro\Arduino\Builds\Marlin\mega_atmega2560\ultralcd.cpp.o&#xD;&#xA;source_file=C:\Documents and Settings\mywool\Local Settings\Application Data\VMicro\Arduino\Builds\Marlin\mega_atmega2560\ultralcd.cpp&#xD;&#xA;build.architecture=avr&#xD;&#xA;vmresolved.compiler.path=D:\arduino-1.5.6-r2\hardware\tools\avr\bin\&#xD;&#xA;vmresolved.tools.path=D:\arduino-1.5.6-r2\hardware\tools\avr&#xD;&#xA;" arduino.build.mcu="atmega2560" arduino.build.f_cpu="16000000L" arduino.build.core="arduino" arduino.upload.protocol="wiring" arduino.upload.speed="115200" arduino.upload.maximum_size="258048" visualmicro.application.name="arduino15x" visualmicro.package.name="arduino" visualmicro.platform.name="avr" arduino.upload.port="COM6" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
